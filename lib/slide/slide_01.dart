@@ -20,7 +20,7 @@ class _Slide01State extends State<Slide01> {
           child: DecodingTextEffect(
             "Null Safety",
             decodeEffect: DecodeEffect.fromStart,
-            textStyle: TextStyle(fontSize: 140),
+            textStyle: TextStyle(fontSize: 140, fontWeight: FontWeight.bold),
           ),
         ),
         Positioned(
