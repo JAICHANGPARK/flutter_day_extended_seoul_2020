@@ -109,8 +109,8 @@ class Slide0101 extends StatelessWidget {
                               decoration: BoxDecoration(color: Colors.blue),
                               child: Center(
                                 child: Text(
-                                  "약간 매운맛",
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 24),
+                                  "약간 매운맛🔥",
+                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 26),
                                 ),
                               ),
                             ),
@@ -177,8 +177,8 @@ class Slide0101 extends StatelessWidget {
                               decoration: BoxDecoration(color: Colors.blue),
                               child: Center(
                                 child: Text(
-                                  "순한맛/물탄맛",
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 24),
+                                  "순한맛/물탄맛💦",
+                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 26),
                                 ),
                               ),
                             ),
