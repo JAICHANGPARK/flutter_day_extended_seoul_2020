@@ -1,5 +1,6 @@
 
 import 'package:f_desktop/main.dart';
+import 'package:f_desktop/slide/intro_slide.dart';
 import 'package:flutter/material.dart';
 
 class SplashSlider extends StatefulWidget {
@@ -18,7 +19,8 @@ class _SplashSliderState extends State<SplashSlider> {
     return GestureDetector(
       onTap: (){
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul")
+            builder: (context) => IntroSlide()
+//          builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul")
         ));
       },
       child: Image.asset('assets/FL18-Slide-93-v01.gif', fit: BoxFit.cover,
