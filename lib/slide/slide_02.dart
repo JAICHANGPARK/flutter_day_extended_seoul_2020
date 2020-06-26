@@ -97,7 +97,18 @@ class _Slide02State extends State<Slide02> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text("📌 출처:  https://medium.com/@richardeng/dart-is-dead-aedced9fd3d1", style: _tStyle,),
                 ),
+              ],
+            ),
 
+            ExpansionTile(
+              title: Text("📍 Dart Developer Summit 2015 (1차 전환점)"),
+              expandedAlignment: Alignment.centerLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 Eric Seidel : Sky engine을 활용하여 모바일 시스템에 Dart가 사용될 수 있음을 보여줌.", style: _tStyle,),
+                ),
               ],
             ),
             ExpansionTile(
