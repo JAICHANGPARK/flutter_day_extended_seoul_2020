@@ -1,6 +1,7 @@
 # f_desktop
 
-A new Flutter project.
+- Flutter Desktop Embedded App for windows 
+- https://festa.io/events/1070
 
 ## Getting Started
 
