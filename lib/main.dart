@@ -9,6 +9,7 @@ import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
 import 'slide/slide_01_01.dart';
 import 'slide/slide_02.dart';
+import 'slide/slide_02_00.dart';
 import 'slide/slide_03.dart';
 import 'slide/slide_page_01_test.dart';
 
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 return Center(
                     child: Text(
                   remaining,
-                  style: TextStyle(fontSize: 24),
+                  style: TextStyle(fontSize: 32),
                 )); // 01:00:00
               },
               duration: Duration(minutes: 20),
@@ -85,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Slide01(),
                 Slide0101(),
+                Slide0200(),
                 Slide02(),
                 Slide03(),
                 Slide00(),
@@ -115,8 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   FloatingActionButton(
                     onPressed: () {
                       _pageIndex++;
-                      if (_pageIndex > 3) {
-                        _pageIndex = 3;
+                      if (_pageIndex > 6) {
+                        _pageIndex = 6;
                       }
                       setState(() {});
                     },
