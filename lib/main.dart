@@ -5,6 +5,7 @@ import 'package:f_desktop/slide/title_slider.dart';
 import 'package:f_desktop/utils/countdown_timer.dart';
 import 'package:flutter/material.dart';
 
+import 'slide/final_slide.dart';
 import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
 import 'slide/slide_01_01.dart';
@@ -90,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Slide02(),
                 Slide03(),
                 Slide00(),
+                FinalSlide(),
               ],
             ),
             Positioned(
