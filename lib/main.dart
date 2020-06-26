@@ -41,14 +41,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final FocusNode _focusNode = FocusNode();
+  PageController _pageController;
   int _pageIndex = 0;
   Timer _timer;
+
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {});
+    _pageController = PageController(initialPage: _pageIndex);
   }
 
   @override
@@ -82,18 +85,35 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         child: Stack(
           children: [
-            IndexedStack(
-              index: _pageIndex,
+            PageView(
+              onPageChanged: (newValue){
+                setState(() {
+                  _pageIndex = newValue;
+                });
+              },
+              controller: _pageController,
+              scrollDirection: Axis.vertical,
               children: [
                 Slide01(),
                 Slide0101(),
                 Slide0200(),
                 Slide02(),
                 Slide03(),
-                Slide00(),
                 FinalSlide(),
               ],
             ),
+//            IndexedStack(
+//              index: _pageIndex,
+//              children: [
+//                Slide01(),
+//                Slide0101(),
+//                Slide0200(),
+//                Slide02(),
+//                Slide03(),
+//                Slide00(),
+//                FinalSlide(),
+//              ],
+//            ),
             Positioned(
               right: 16,
               bottom: 16,
@@ -102,11 +122,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   _pageIndex != 0
                       ? FloatingActionButton(
                           onPressed: () {
-                            _pageIndex--;
-                            if (_pageIndex <= 0) {
-                              _pageIndex = 0;
-                            }
-                            setState(() {});
+//                            _pageIndex--;
+//                            if (_pageIndex <= 0) {
+//                              _pageIndex = 0;
+//                            }
+//                            setState(() {});
+
+                            _pageController.previousPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
                           },
                           tooltip: 'pREV',
                           heroTag: "Prev Page",
@@ -118,11 +140,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   FloatingActionButton(
                     onPressed: () {
-                      _pageIndex++;
-                      if (_pageIndex > 6) {
-                        _pageIndex = 6;
-                      }
-                      setState(() {});
+
+                      _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+//                      _pageIndex++;
+//                      if (_pageIndex > 10) {
+//                        _pageIndex = 10;
+//                      }
+//                      setState(() {});
                     },
                     heroTag: "next",
                     tooltip: 'Next Page',
