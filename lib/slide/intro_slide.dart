@@ -39,11 +39,11 @@ class _IntroSlideState extends State<IntroSlide> {
                             "이제 Null 안전하게 지켜줄게",
                             style: GoogleFonts.nanumGothic(
                               fontWeight: FontWeight.bold,
-                              fontSize: 36,
+                              fontSize: 64,
                             ),
                           ),
                           SizedBox(
-                            height: 24,
+                            height: 64,
                           ),
                           Text(
                             "박제창 (@Dreamwalker)",
