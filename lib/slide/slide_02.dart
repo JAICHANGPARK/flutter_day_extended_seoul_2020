@@ -101,13 +101,47 @@ class _Slide02State extends State<Slide02> {
             ),
 
             ExpansionTile(
-              title: Text("📍 Dart Developer Summit 2015 (1차 전환점)"),
+              title: Text("📍 Dart Developer Summit 2015 "),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("📌 Eric Seidel : Sky engine을 활용하여 모바일 시스템에 Dart가 사용될 수 있음을 보여줌.", style: _tStyle,),
+                  child: Text("📌 Eric Seidel의 [Sky: An Experiment Writing Dart for Mobile]발표에서 Sky engine을 활용하여 모바일 시스템에 Dart가 사용될 수 있음을 보여줌.", style: _tStyle,),
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("📍 Dart Developer Summit 2016 (1차 전환점)"),
+              expandedAlignment: Alignment.centerLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 Flutter에 대한 소개와 IOS, Android 디바이스에서 구동되는 것을 보여줌.", style: _tStyle,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 Hot Reload에 대한 소개", style: _tStyle,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 AOT 컴파일에 대한 소개", style: _tStyle,),
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("📍 Google I/O 17 (2차 전환점)"),
+              expandedAlignment: Alignment.centerLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌  Single Codebase, Two Apps with Flutter and Firebase", style: _tStyle,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌  370줄 미만의 코드로 Firebase와 연계한 채팅 앱을 iOS, Android 디바이스에 포팅.", style: _tStyle,),
                 ),
               ],
             ),
@@ -156,12 +190,12 @@ class _Slide02State extends State<Slide02> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("📌 당시 개발자 프리뷰 단계로 2018년 11월 18일 Null Safety에 대한 이슈가 등록됨"),
+                  child: Text("📌 당시 개발자 프리뷰 단계로 2018년 11월 18일 Null Safety에 대한 이슈가 등록됨", style: _tStyle),
                 ),
                 Image.asset("assets/img_slide_02_00.png"),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음."),
+                  child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음.", style: _tStyle),
                 ),
               ],
             ),
@@ -172,12 +206,12 @@ class _Slide02State extends State<Slide02> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("📌 당시 개발자 프리뷰 단계로 2018년 11월 18일 Null Safety에 대한 이슈가 등록됨"),
+                  child: Text("📌 당시 개발자 프리뷰 단계로 2018년 11월 18일 Null Safety에 대한 이슈가 등록됨", style: _tStyle),
                 ),
                 Image.asset("assets/img_slide_02_00.png"),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음."),
+                  child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음.", style: _tStyle),
                 ),
               ],
             )
