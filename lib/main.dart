@@ -1,4 +1,4 @@
-import 'package:f_desktop/slide/second_page.dart';
+import 'package:f_desktop/slide/slide_page_00.dart';
 import 'package:f_desktop/slide/title_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -30,16 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   final FocusNode _focusNode = FocusNode();
-  int pageIndex = 0;
+  int _pageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         focusNode: _focusNode,
         onKey: (event) {
           print(event);
-          print(pageIndex);
+          print(_pageIndex);
           if (event.logicalKey.keyLabel == "[") {
 
           } else if (event.logicalKey.keyLabel == "]") {
@@ -61,25 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Stack(
           children: [
             IndexedStack(
-              index: pageIndex,
+              index: _pageIndex,
               children: [
-                SecondSlidePage(),
-                Center(
-                  // Center is a layout widget. It takes a single child and positions it
-                  // in the middle of the parent.
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Wow',
-                      ),
-                      Text(
-                        '$_counter',
-                        style: Theme.of(context).textTheme.headline4,
-                      ),
-                    ],
-                  ),
-                ),
+                Slide00(),
+                Slide00(),
+                Slide01(),
+                Slide00(),
               ],
             ),
             Positioned(
@@ -87,35 +67,27 @@ class _MyHomePageState extends State<MyHomePage> {
               bottom: 16,
               child: Row(
                 children: [
-                  FloatingActionButton(
+
+                  _pageIndex != 0?  FloatingActionButton(
                     onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    tooltip: 'home',
-                    heroTag: "home",
-                    child: Icon(Icons.home),
-                  ),
-                  SizedBox(width: 16,),
-                 pageIndex != 0?  FloatingActionButton(
-                    onPressed: () {
-                      pageIndex--;
-                      if (pageIndex <= 0) {
-                        pageIndex = 0;
+                      _pageIndex--;
+                      if (_pageIndex <= 0) {
+                        _pageIndex = 0;
                       }
                       setState(() {
 
                       });
                     },
                     tooltip: 'pREV',
-                    heroTag: "prev page",
+                    heroTag: "Prev Page",
                     child: Icon(Icons.arrow_back),
                   ) : Container(),
                   SizedBox(width: 16,),
                   FloatingActionButton(
                     onPressed: () {
-                      pageIndex++;
-                      if (pageIndex > 2) {
-                        pageIndex = 2;
+                      _pageIndex++;
+                      if (_pageIndex > 2) {
+                        _pageIndex = 2;
                       }
                       setState(() {
 
