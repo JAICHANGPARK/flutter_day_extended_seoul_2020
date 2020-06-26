@@ -25,11 +25,11 @@ class _IntroSlideState extends State<IntroSlide> {
               child: Row(
                 children: [
                   CircleAvatar(
-                    radius: MediaQuery.of(context).size.width / 8,
+                    radius: MediaQuery.of(context).size.width / 9,
                     backgroundImage: AssetImage("assets/img_profile.jpg"),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 64),
+                    padding: const EdgeInsets.only(left: 84),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,16 +40,16 @@ class _IntroSlideState extends State<IntroSlide> {
                         ),),
                         SizedBox(height: 24,),
                         Text("박제창 (@Dreamwalker)",style: GoogleFonts.nanumGothic(
-                          fontSize: 24,
+                          fontSize: 26,
                         ),),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 0),
                           child: Text("Angel Robotics", style: GoogleFonts.nanumGothic(
-                            fontSize: 24,
+                            fontSize: 20,
                           ),),
                         ),
                         Text("https://github.com/JAICHANGPARK", style:  GoogleFonts.nanumGothic(
-                          fontSize: 24
+                          fontSize: 20
                         ),)
 
 
