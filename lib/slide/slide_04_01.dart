@@ -11,13 +11,14 @@ class Slide0401 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
+            flex: 2,
             child: Text(
-              "🛡 Null Aware 2",
-              style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 100),
+              "🛡 Null Aware (non-nullable) 2\n [??=]",
+              style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 64),
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 4,
             child: Row(
               children: [
                 Card(
