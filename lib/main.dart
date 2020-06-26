@@ -3,6 +3,7 @@ import 'package:f_desktop/slide/title_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'slide/intro_slide.dart';
+import 'slide/slide_page_01.dart';
 
 void main() {
   runApp(MyApp());
