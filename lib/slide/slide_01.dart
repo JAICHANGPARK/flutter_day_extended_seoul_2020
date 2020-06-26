@@ -14,17 +14,17 @@ class _Slide01State extends State<Slide01> {
       children: [
         Particles(
           30, // Number of Particles
-          Colors.blue, // Color of Particles
+          Colors.blue[300], // Color of Particles
         ),
         Center(
           child: DecodingTextEffect(
             "Null Safety",
             decodeEffect: DecodeEffect.fromStart,
-            textStyle: TextStyle(fontSize: 120),
+            textStyle: TextStyle(fontSize: 140),
           ),
         ),
         Positioned(
-          left: 0,
+          left: -24,
           bottom: -60,
           child: Image.asset("assets/dash.png"),
         )
