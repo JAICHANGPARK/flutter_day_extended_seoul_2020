@@ -14,12 +14,13 @@ class _Slide01State extends State<Slide01> with SingleTickerProviderStateMixin{
   void initState() {
     // TODO: implement initState
     super.initState();
-    _animationController = AnimationController(vsync: this, duration: Duration(seconds:1));
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds:3));
     _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)..addListener(() {
       setState(() {
 
       });
     });
+    _animationController.forward();
   }
   @override
   Widget build(BuildContext context) {
