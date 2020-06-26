@@ -8,10 +8,14 @@ import 'package:flutter/material.dart';
 import 'slide/final_slide.dart';
 import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
+import 'slide/slide_01_00.dart';
 import 'slide/slide_01_01.dart';
 import 'slide/slide_02.dart';
 import 'slide/slide_02_00.dart';
 import 'slide/slide_03.dart';
+import 'slide/slide_04.dart';
+import 'slide/slide_04_01.dart';
+import 'slide/slide_05.dart';
 import 'slide/slide_page_01_test.dart';
 
 void main() {
@@ -95,10 +99,14 @@ class _MyHomePageState extends State<MyHomePage> {
               scrollDirection: Axis.vertical,
               children: [
                 Slide01(),
+                Slide0100(),
                 Slide0101(),
                 Slide0200(),
                 Slide02(),
                 Slide03(),
+                Slide04(),
+                Slide0401(),
+                Slide05(),
                 FinalSlide(),
               ],
             ),

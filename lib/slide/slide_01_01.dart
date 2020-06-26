@@ -11,7 +11,7 @@ class Slide0101 extends StatelessWidget {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: Stack(
               children: [
                 Positioned(
@@ -60,7 +60,7 @@ class Slide0101 extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: Stack(
               children: [
                 Positioned(
@@ -127,7 +127,7 @@ class Slide0101 extends StatelessWidget {
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: Stack(
               children: [
                 Positioned(

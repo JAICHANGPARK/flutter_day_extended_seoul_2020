@@ -107,7 +107,7 @@ class _Slide02State extends State<Slide02> {
               ],
             ),
             ExpansionTile(
-              title: Text("📍 침체기(일부러 배울 필요없는 언어)", style: _titleStyle,),
+              title: Text("📍 침체기(일부러 배울 필요없는 언어 선정??!)", style: _titleStyle,),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
