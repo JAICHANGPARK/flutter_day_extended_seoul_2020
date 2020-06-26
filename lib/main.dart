@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
+import 'slide/slide_01_01.dart';
 import 'slide/slide_02.dart';
 import 'slide/slide_03.dart';
 import 'slide/slide_page_01_test.dart';
@@ -83,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
               index: _pageIndex,
               children: [
                 Slide01(),
+                Slide0101(),
                 Slide02(),
                 Slide03(),
                 Slide00(),
