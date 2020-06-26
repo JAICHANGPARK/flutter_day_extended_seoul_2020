@@ -36,7 +36,7 @@ class _Slide02State extends State<Slide02> {
             ),
             SizedBox(height: 16,),
             ExpansionTile(
-              title: Text("First appeared"),
+              title: Text("📍 First appeared"),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -47,7 +47,7 @@ class _Slide02State extends State<Slide02> {
               ],
             ),
             ExpansionTile(
-              title: Text("Null Aware 도입 (v1.12.0)"),
+              title: Text("📍 Null Aware 도입 (v1.12.0)"),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -74,7 +74,7 @@ class _Slide02State extends State<Slide02> {
               ],
             ),
             ExpansionTile(
-              title: Text("Dart 2 의 도입"),
+              title: Text("📍 Dart 2 의 도입 (v2.0.0)"),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -90,12 +90,29 @@ class _Slide02State extends State<Slide02> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text("📌 new keyword가 optional로 변경", style: _tStyle,),
                 ),
-
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 const keyword가 optional로 변경", style: _tStyle,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 Dart's 타입 시스템의 개선", style: _tStyle,),
+                ),
               ],
             ),
-
             ExpansionTile(
-              title: Text("Null Safety"),
+              title: Text("📍 v2.3.0"),
+              expandedAlignment: Alignment.centerLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 Slice keyword 도입", style: _tStyle,),
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("📍 Null Safety"),
               expandedAlignment: Alignment.centerLeft,
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
               children: [
