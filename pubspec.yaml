@@ -35,6 +35,8 @@ dependencies:
   decoding_text_effect: ^1.1.1
   flutter_particles: ^1.0.0+7
 
+  flutter_svg: ^0.18.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
