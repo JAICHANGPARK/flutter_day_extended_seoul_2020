@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Slide01(),
                 Slide02(),
-                Slide00(),
+                Slide03(),
                 Slide00(),
               ],
             ),
