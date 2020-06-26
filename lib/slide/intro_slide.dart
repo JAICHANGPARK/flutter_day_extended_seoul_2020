@@ -18,8 +18,22 @@ class _IntroSlideState extends State<IntroSlide> {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 160,
+                  radius: MediaQuery.of(context).size.width / 10,
                   backgroundImage: AssetImage("assets/img_profile.jpg"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("박제창 / @Dreamwalker"),
+                      Text("Angel Robotics"),
+                      Text("https://github.com/JAICHANGPARK")
+
+
+                    ],
+                  ),
                 )
               ],
             ),
