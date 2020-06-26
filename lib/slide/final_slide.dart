@@ -9,7 +9,7 @@ class FinalSlide extends StatefulWidget {
 class _FinalSlideState extends State<FinalSlide> {
   @override
   Widget build(BuildContext context) {
-    return Image.asset('assets/FL18-Slide-97-v01.gif', fit: BoxFit.cover,
+    return Image.asset('assets/FL18_Slide_97_v01.gif', fit: BoxFit.cover,
       height: MediaQuery.of(context).size.height,
       repeat: ImageRepeat.repeat,
       width: MediaQuery.of(context).size.width,);
