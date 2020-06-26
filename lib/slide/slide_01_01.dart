@@ -39,9 +39,15 @@ class Slide0101 extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 42),
                           ),
                           Divider(),
-                          Text("1. Dart", style: _tStyle,),
-                          Text("2. Flutter Day 엿보기", style: _tStyle),
-                          Text("2. Null Safety", style: _tStyle),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("1. Dart", style: _tStyle,),
+                              Text("2. Flutter Day 엿보기", style: _tStyle),
+                              Text("2. Null Safety", style: _tStyle),
+                            ],
+                          ),
+
                           Divider(),
                         ],
                       ),
