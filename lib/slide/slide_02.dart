@@ -125,11 +125,22 @@ class _Slide02State extends State<Slide02> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음."),
                 ),
-
-
-
-
-
+              ],
+            ),
+            ExpansionTile(
+              title: Text("📍 현재 v2.9.0"),
+              expandedAlignment: Alignment.centerLeft,
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 당시 개발자 프리뷰 단계로 2018년 11월 18일 Null Safety에 대한 이슈가 등록됨"),
+                ),
+                Image.asset("assets/img_slide_02_00.png"),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("📌 2019.04.23 Added e1?.[e2] operator syntax를 시작으로 Null safety에 대한 적용이 시작되었음."),
+                ),
               ],
             )
           ],
