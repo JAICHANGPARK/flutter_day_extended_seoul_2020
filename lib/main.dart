@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
 import 'slide/slide_02.dart';
+import 'slide/slide_03.dart';
 import 'slide/slide_page_01_test.dart';
 
 void main() {
@@ -112,8 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   FloatingActionButton(
                     onPressed: () {
                       _pageIndex++;
-                      if (_pageIndex > 2) {
-                        _pageIndex = 2;
+                      if (_pageIndex > 3) {
+                        _pageIndex = 3;
                       }
                       setState(() {});
                     },
