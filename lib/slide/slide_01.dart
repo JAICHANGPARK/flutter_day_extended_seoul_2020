@@ -7,7 +7,20 @@ class Slide01 extends StatefulWidget {
   _Slide01State createState() => _Slide01State();
 }
 
-class _Slide01State extends State<Slide01> {
+class _Slide01State extends State<Slide01> with SingleTickerProviderStateMixin{
+  AnimationController _animationController;
+  Animation<double> _animation;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds:1));
+    _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)..addListener(() {
+      setState(() {
+
+      });
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,7 +39,9 @@ class _Slide01State extends State<Slide01> {
         Positioned(
           left: -24,
           bottom: -60,
-          child: Image.asset("assets/dash.png"),
+          child: ScaleTransition(
+              scale: _animation,
+              child: Image.asset("assets/dash.png")),
         )
       ],
     );
