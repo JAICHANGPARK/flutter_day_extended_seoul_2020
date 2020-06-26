@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-class Slide01 extends StatelessWidget {
+class Slide01Test extends StatelessWidget {
   String _markdownData = """
 # Markdown Example
 Markdown allows you to easily include formatted text, images, and even formatted Dart code in your app.
