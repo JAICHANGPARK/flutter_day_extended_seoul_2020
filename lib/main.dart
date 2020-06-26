@@ -16,6 +16,7 @@ import 'slide/slide_03.dart';
 import 'slide/slide_04.dart';
 import 'slide/slide_04_01.dart';
 import 'slide/slide_05.dart';
+import 'slide/slide_06.dart';
 import 'slide/slide_page_01_test.dart';
 
 void main() {
@@ -107,6 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Slide04(),
                 Slide0401(),
                 Slide05(),
+                Slide06(),
                 FinalSlide(),
               ],
             ),
