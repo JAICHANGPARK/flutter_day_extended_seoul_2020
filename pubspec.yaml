@@ -37,6 +37,7 @@ dependencies:
 
   flutter_svg: ^0.18.0
   cached_network_image: ^2.2.0+1
+  animated_text_kit: ^2.2.0
 
 dev_dependencies:
   flutter_test:
