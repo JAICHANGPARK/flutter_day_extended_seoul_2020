@@ -3,7 +3,8 @@ import 'package:f_desktop/slide/title_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'slide/intro_slide.dart';
-import 'slide/slide_page_01.dart';
+import 'slide/slide_01.dart';
+import 'slide/slide_page_01_test.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,9 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
             IndexedStack(
               index: _pageIndex,
               children: [
-                Slide00(),
-                Slide00(),
                 Slide01(),
+                Slide00(),
+                Slide00(),
                 Slide00(),
               ],
             ),
