@@ -48,7 +48,7 @@ class _IntroSlideState extends State<IntroSlide> {
                             fontSize: 24,
                           ),),
                         ),
-                        Text("Github: https://github.com/JAICHANGPARK", style:  GoogleFonts.nanumGothic(
+                        Text("https://github.com/JAICHANGPARK", style:  GoogleFonts.nanumGothic(
                           fontSize: 24
                         ),)
 
@@ -65,7 +65,7 @@ class _IntroSlideState extends State<IntroSlide> {
             child: Center(
               child: GestureDetector(
                 onTap: (){
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
 //                    builder: (context) => IntroSlide()
             builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul")
                   ));
