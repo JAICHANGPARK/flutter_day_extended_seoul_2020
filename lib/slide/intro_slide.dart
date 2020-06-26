@@ -12,24 +12,35 @@ class _IntroSlideState extends State<IntroSlide> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [Expanded(
-          flex: 2,
+          flex: 3,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 38),
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: MediaQuery.of(context).size.width / 10,
+                  radius: MediaQuery.of(context).size.width / 8,
                   backgroundImage: AssetImage("assets/img_profile.jpg"),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 36),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("박제창 / @Dreamwalker"),
-                      Text("Angel Robotics"),
-                      Text("https://github.com/JAICHANGPARK")
+                      Text("박제창 ( @Dreamwalker )",style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 32,
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 4),
+                        child: Text("Angel Robotics", style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 28,
+                        ),),
+                      ),
+                      Text("Github: https://github.com/JAICHANGPARK", style: TextStyle(
+                        fontSize: 28
+                      ),)
 
 
                     ],
@@ -46,9 +57,10 @@ class _IntroSlideState extends State<IntroSlide> {
               onPressed: (){},
               child: Text("시작하기",style: TextStyle(
                 fontSize: 24,
+                color: Colors.white
               ),),
-              color: Theme.of(context).buttonColor,
-              padding: EdgeInsets.all(16),
+              color: Theme.of(context).primaryColor,
+              padding: EdgeInsets.all(8),
             ),
           ),
         )],
