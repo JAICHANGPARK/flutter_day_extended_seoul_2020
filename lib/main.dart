@@ -16,8 +16,12 @@ import 'slide/slide_03.dart';
 import 'slide/slide_04.dart';
 import 'slide/slide_04_01.dart';
 import 'slide/slide_04_02.dart';
+import 'slide/slide_04_03.dart';
+import 'slide/slide_04_04.dart';
+import 'slide/slide_04_05.dart';
 import 'slide/slide_05.dart';
 import 'slide/slide_06.dart';
+import 'slide/slide_07.dart';
 import 'slide/slide_page_01_test.dart';
 
 void main() {
@@ -109,8 +113,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Slide04(),
                 Slide0401(),
                 Slide0402(),
+                Slide0403(),
+                Slide0404(),
+                Slide0405(),
                 Slide05(),
                 Slide06(),
+                Slide07(),
                 FinalSlide(),
               ],
             ),
@@ -129,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Positioned(
               right: 16,
               bottom: 16,
-              child: Row(
+              child: Column(
                 children: [
                   _pageIndex != 0
                       ? FloatingActionButton(
@@ -144,11 +152,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           tooltip: 'Prev Slide',
                           heroTag: "Prev Page",
-                          child: Icon(Icons.arrow_back),
+                          child: Icon(Icons.arrow_upward),
                         )
                       : Container(),
                   SizedBox(
-                    width: 16,
+                    height: 16,
                   ),
                   FloatingActionButton(
                     onPressed: () {
@@ -162,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     heroTag: "next ",
                     tooltip: 'Next Slide',
-                    child: Icon(Icons.arrow_forward),
+                    child: Icon(Icons.arrow_downward),
                   ),
                 ],
               ),
