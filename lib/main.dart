@@ -67,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: IndexedStack(
           index: pageIndex,
           children: [
-            IntroSlide(),
             SecondSlidePage(),
             Center(
               // Center is a layout widget. It takes a single child and positions it
