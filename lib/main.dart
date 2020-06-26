@@ -31,6 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -54,14 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
           if (event.logicalKey.keyLabel == "[") {
             pageIndex--;
             if (pageIndex <= 0) {
-                pageIndex = 0;
+              pageIndex = 0;
             }
           } else if (event.logicalKey.keyLabel == "]") {
             pageIndex++;
-            if(pageIndex > 2) {
-                pageIndex = 2;
+            if (pageIndex > 2) {
+              pageIndex = 2;
             }
-
           }
         },
         child: IndexedStack(
@@ -89,10 +89,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          showDialog(context: context, builder: (context)=> AlertDialog(
-            title: Text("흠"),
-          ));
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                    title: Text("흠"),
+                  ));
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),
