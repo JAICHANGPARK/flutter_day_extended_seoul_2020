@@ -32,6 +32,8 @@ dependencies:
   google_fonts: ^1.1.0
   markdown: ^2.1.5
   flutter_markdown: ^0.4.2
+  decoding_text_effect: ^1.1.1
+  flutter_particles: ^1.0.0+7
 
 dev_dependencies:
   flutter_test:
