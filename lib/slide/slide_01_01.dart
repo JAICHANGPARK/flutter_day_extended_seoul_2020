@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class Slide0101 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    TextStyle _tStyle = TextStyle(
+        fontSize: 21
+    );
     return Row(
       children: [
         Expanded(
@@ -16,7 +20,7 @@ class Slide0101 extends StatelessWidget {
                   bottom: 0,
                   right: 0,
                   child: Card(
-                    color: Colors.blue,
+                    color: Colors.blue[200],
                   ),
                 ),
                 Positioned(
@@ -35,9 +39,9 @@ class Slide0101 extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 42),
                           ),
                           Divider(),
-                          Text("1. Dart"),
-                          Text("2. Flutter Day 엿보기"),
-                          Text("2. Null Safety"),
+                          Text("1. Dart", style: _tStyle,),
+                          Text("2. Flutter Day 엿보기", style: _tStyle),
+                          Text("2. Null Safety", style: _tStyle),
                           Divider(),
                         ],
                       ),
@@ -59,7 +63,7 @@ class Slide0101 extends StatelessWidget {
                   bottom: 0,
                   right: 0,
                   child: Card(
-                    color: Colors.blue,
+                    color: Colors.blue[200],
                   ),
                 ),
                 Positioned(
@@ -82,10 +86,10 @@ class Slide0101 extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("1. 비전공자"),
-                              Text("2. 디자이너"),
-                              Text("3. Flutter를 처음 경험하신 분"),
-                              Text("4. Flutter 사용 1개월 미만"),
+                              Text("1. 비전공자", style: _tStyle),
+                              Text("2. 디자이너", style: _tStyle),
+                              Text("3. Flutter를 처음 경험하신 분", style: _tStyle),
+                              Text("4. Flutter 사용 1개월 미만", style: _tStyle),
                             ],
                           ),
 
@@ -126,7 +130,7 @@ class Slide0101 extends StatelessWidget {
                   bottom: 0,
                   right: 0,
                   child: Card(
-                    color: Colors.blue,
+                    color: Colors.blue[200],
                   ),
                 ),
                 Positioned(
@@ -149,11 +153,11 @@ class Slide0101 extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("1. 전공자"),
-                              Text("2. 그냥 고수"),
-                              Text("3. Flutter를 경험해 보신분"),
-                              Text("4. Flutter 사용 3개월 이상"),
-                              Text("5. Flutter로 제품출시까지 해보신 분"),
+                              Text("1. 전공자", style: _tStyle),
+                              Text("2. 중수/초고수", style: _tStyle),
+                              Text("3. Flutter를 경험해 보신분", style: _tStyle),
+                              Text("4. Flutter 사용 3개월 이상", style: _tStyle),
+                              Text("5. Flutter로 제품출시까지 해보신 분", style: _tStyle),
                             ],
                           ),
 
