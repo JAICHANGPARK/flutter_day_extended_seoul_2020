@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class IntroSlide extends StatefulWidget {
   @override
@@ -22,24 +23,27 @@ class _IntroSlideState extends State<IntroSlide> {
                   backgroundImage: AssetImage("assets/img_profile.jpg"),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 36),
+                  padding: const EdgeInsets.only(left: 64),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("박제창 ( @Dreamwalker )",style: TextStyle(
+                      Text("이제 Null 안전하게 지켜줄게",style: GoogleFonts.nanumGothic(
                         fontWeight: FontWeight.bold,
-                        fontSize: 32,
+                        fontSize: 36,
+                      ),),
+                      SizedBox(height: 24,),
+                      Text("박제창 (@Dreamwalker)",style: GoogleFonts.nanumGothic(
+                        fontSize: 24,
                       ),),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 4),
-                        child: Text("Angel Robotics", style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 28,
+                        padding: const EdgeInsets.symmetric(vertical: 0),
+                        child: Text("Angel Robotics", style: GoogleFonts.nanumGothic(
+                          fontSize: 24,
                         ),),
                       ),
-                      Text("Github: https://github.com/JAICHANGPARK", style: TextStyle(
-                        fontSize: 28
+                      Text("Github: https://github.com/JAICHANGPARK", style:  GoogleFonts.nanumGothic(
+                        fontSize: 24
                       ),)
 
 
@@ -53,15 +57,24 @@ class _IntroSlideState extends State<IntroSlide> {
         Expanded(
           flex: 1,
           child: Center(
-            child: MaterialButton(
-              onPressed: (){},
-              child: Text("시작하기",style: TextStyle(
-                fontSize: 24,
-                color: Colors.white
-              ),),
-              color: Theme.of(context).primaryColor,
-              padding: EdgeInsets.all(8),
-            ),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 2,
+                    spreadRadius: 3
+                  )
+                ]
+              ),
+              height: 84,
+              width: 84,
+              child: Center(
+                child: Icon(Icons.play_arrow, size: 42,),
+              ),
+            )
           ),
         )],
       ),
