@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                             _pageController.previousPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
                           },
-                          tooltip: 'pREV',
+                          tooltip: 'Prev Slide',
                           heroTag: "Prev Page",
                           child: Icon(Icons.arrow_back),
                         )
@@ -148,8 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //                      }
 //                      setState(() {});
                     },
-                    heroTag: "next",
-                    tooltip: 'Next Page',
+                    heroTag: "next ",
+                    tooltip: 'Next Slide',
                     child: Icon(Icons.arrow_forward),
                   ),
                 ],
