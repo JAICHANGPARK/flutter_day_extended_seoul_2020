@@ -28,6 +28,7 @@ dependencies:
   flutter_svg: ^0.18.0
   cached_network_image: ^2.2.0+1
   animated_text_kit: ^2.2.0
+  geopattern_flutter: ^0.1.1
 
   pimp_my_button:
     git:
@@ -41,3 +42,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/final/
