@@ -22,7 +22,7 @@ class _IntroSlideState extends State<IntroSlide> {
             Expanded(
               flex: 3,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 38),
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Row(
                   children: [
                     CircleAvatar(
@@ -39,7 +39,7 @@ class _IntroSlideState extends State<IntroSlide> {
                             "이제 Null 안전하게 지켜줄게",
                             style: GoogleFonts.nanumGothic(
                               fontWeight: FontWeight.bold,
-                              fontSize: 64,
+                              fontSize: 62,
                             ),
                           ),
                           SizedBox(
