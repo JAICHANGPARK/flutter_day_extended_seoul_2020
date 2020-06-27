@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter_day_seoul/slide/slide_19.dart';
 import 'package:flutter_day_seoul/slide/title_slider.dart';
 import 'package:flutter_day_seoul/utils/countdown_timer.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,12 @@ import 'slide/slide_09.dart';
 import 'slide/slide_10.dart';
 import 'slide/slide_11.dart';
 import 'slide/slide_12.dart';
+import 'slide/slide_13.dart';
+import 'slide/slide_14.dart';
+import 'slide/slide_15.dart';
+import 'slide/slide_16.dart';
+import 'slide/slide_17.dart';
+import 'slide/slide_18.dart';
 import 'slide/thank_you_slide.dart';
 
 void main() {
@@ -139,6 +146,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Slide0700(),
                 Slide09(),
                 Slide12(),
+                Slide13(),
+                Slide14(),
+                Slide15(),
+                Slide16(),
+                Slide17(),
+                Slide18(),
+                Slide19(),
                 FinalSlide(),
                 ThankyouSlide(),
               ],
@@ -161,6 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ListTile(
                                   title: Text("Home"),
                                   onTap: (){
+                                    _pageIndex = 0;
                                     _pageController.animateToPage(0, duration: Duration(
                                         seconds: 1
                                     ), curve: Curves.easeOut);
@@ -170,7 +185,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ListTile(
                                   title: Text("Dart"),
                                   onTap: (){
-                                    _pageController.animateToPage(4, duration: Duration(
+                                    _pageIndex = 3;
+                                    _pageController.animateToPage(3, duration: Duration(
                                       seconds: 1
                                     ), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
@@ -179,6 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ListTile(
                                   title: Text("Null Safety"),
                                   onTap: (){
+                                    _pageIndex = 12;
                                     _pageController.animateToPage(12, duration: Duration(
                                         seconds: 1
                                     ), curve: Curves.easeOut);
@@ -189,7 +206,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ListTile(
                                   title: Text("Final Slide"),
                                   onTap: (){
-                                    _pageController.animateToPage(22, duration: Duration(
+                                    _pageIndex = 29;
+                                    _pageController.animateToPage(29, duration: Duration(
                                         seconds: 1
                                     ), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
@@ -217,9 +235,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     height: 16,
                   ),
-                  _pageIndex != 22 ? FloatingActionButton(
+                  _pageIndex != 29 ? FloatingActionButton(
                     onPressed: () {
+                      
                       _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+                      setState(() {
+
+                      });
                     },
                     heroTag: "next ",
                     tooltip: 'Next Slide',

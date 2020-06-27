@@ -99,7 +99,7 @@ class Slide0101 extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text("1. 비전공자", style: _tStyle),
-                              Text("2. 디자이너", style: _tStyle),
+                              Text("2. 프로그래밍을 이제 막 시작하신 분", style: _tStyle),
                               Text("3. Flutter를 처음 경험하신 분", style: _tStyle),
                               Text("4. Flutter 사용 1개월 미만", style: _tStyle),
                             ],

@@ -28,6 +28,13 @@ class _ThankyouSlideState extends State<ThankyouSlide> with SingleTickerProvider
     "assets/final/img_07.png",
     "assets/final/img_08.png",
     "assets/final/img_09.png",
+    "assets/final/img_10.png",
+    "assets/final/img_11.png",
+    "assets/final/img_12.png",
+    "assets/final/img_13.png",
+    "assets/final/img_14.png",
+    "assets/final/img_15.png",
+    "assets/final/img_16.png",
   ];
 
   List<String> _imgList = [];
@@ -38,15 +45,16 @@ class _ThankyouSlideState extends State<ThankyouSlide> with SingleTickerProvider
   void initState() {
     // TODO: implement initState
     super.initState();
+    print("_img.length : ${_img.length}");
     _scrollController = ScrollController()
       ..addListener(() {
-        print(_scrollController.offset);
+//        print(_scrollController.offset);
       });
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 300; i++) {
       _imgList.add(_img[Random().nextInt(_img.length - 1)]);
     }
 
-    _animationController = AnimationController(vsync: this, duration: Duration(seconds: 120));
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds: 90));
     _animation = Tween(begin: 0.0, end: 1236.0).animate(_animationController)
       ..addListener(() {
         setState(() {
@@ -69,29 +77,34 @@ class _ThankyouSlideState extends State<ThankyouSlide> with SingleTickerProvider
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
         Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: GridView.builder(
               controller: _scrollController,
               scrollDirection: Axis.horizontal,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 6),
               itemCount: _imgList.length,
               itemBuilder: (context, index) {
-                return Card(child: Image.asset(_imgList[index]));
+                return Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset(_imgList[index]),
+                  ),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                );
               }),
         ),
         Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Colors.black.withOpacity(0.3),
+          color: Colors.black.withOpacity(0.4),
         ),
         Center(
           child: DecodingTextEffect(
             "Thank You",
             decodeEffect: DecodeEffect.all,
-            textStyle: TextStyle(fontSize: 160, fontWeight: FontWeight.bold, color: Colors.white),
+            textStyle: TextStyle(fontSize: 180, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
       ],
