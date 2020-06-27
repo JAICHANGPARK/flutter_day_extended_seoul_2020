@@ -1,12 +1,8 @@
 import 'dart:async';
-
-import 'package:f_desktop/slide/slide_page_00.dart';
-import 'package:f_desktop/slide/title_slider.dart';
-import 'package:f_desktop/utils/countdown_timer.dart';
+import 'package:flutter_day_seoul/slide/title_slider.dart';
+import 'package:flutter_day_seoul/utils/countdown_timer.dart';
 import 'package:flutter/material.dart';
-
 import 'slide/final_slide.dart';
-import 'slide/intro_slide.dart';
 import 'slide/slide_01.dart';
 import 'slide/slide_01_00.dart';
 import 'slide/slide_01_01.dart';
