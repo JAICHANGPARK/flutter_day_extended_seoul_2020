@@ -33,6 +33,7 @@ class Slide0101 extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 32),
                       child: Column(
+                        mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
                             "구성",
@@ -42,9 +43,14 @@ class Slide0101 extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("1. Dart", style: _tStyle,),
-                              Text("2. Flutter Day 엿보기", style: _tStyle),
-                              Text("2. Null Safety", style: _tStyle),
+                              Text("1. Dart & Null", style: _tStyle.copyWith(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold
+                              ),),
+                              Text("2. Null Safety", style: _tStyle.copyWith(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.bold
+                              ),),
                             ],
                           ),
 

@@ -21,41 +21,58 @@ class Slide0405 extends StatelessWidget {
             flex: 4,
             child: Row(
               children: [
-                Card(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 8),
-                    child: SizedBox(
-                      height: double.infinity,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: ListView(
-                            children: [
+                Expanded(
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8),
+                      child: SizedBox(
+                        height: double.infinity,
+                        width: MediaQuery.of(context).size.width / 2,
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: ListView(
+                              children: [
 
-                              Text(
-                                '''String serveCoffee([String? temp]) {\nreturn temp! + ' coffee';\n}''',
-                                style: GoogleFonts.sourceCodePro(fontWeight: FontWeight.bold, fontSize: 26),
-                              ),
-                              Divider(
-                                height: 24,
-                              ),
+                                Text(
+                                  '''String serveCoffee([String? temp]) {\nreturn temp! + ' coffee';\n}''',
+                                  style: GoogleFonts.sourceCodePro(fontWeight: FontWeight.bold, fontSize: 26),
+                                ),
+                                Divider(
+                                  height: 24,
+                                ),
 
-                              Text(
-                                '''int? foo = 5;\nint bar = foo!;''',
-                                style: GoogleFonts.sourceCodePro(fontWeight: FontWeight.bold, fontSize: 26),
-                              ),
-                              Divider(
-                                height: 24,
-                              ),
-                            ],
+                                Text(
+                                  '''int? foo = 5;\nint bar = foo!;''',
+                                  style: GoogleFonts.sourceCodePro(fontWeight: FontWeight.bold, fontSize: 26),
+                                ),
+                                Divider(
+                                  height: 24,
+                                ),
+                              ],
+                            ),
+
                           ),
-
                         ),
                       ),
                     ),
                   ),
                 ),
+                Expanded(
+                  child: Card(
+                    child: 
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView(
+                        children: [
+                          Text("""if(temp == null){\nthrow ArgumentError();\n}\nreturn temp + ' Coffee';}
+                          """
+                          ,style: GoogleFonts.sourceCodePro(fontWeight: FontWeight.bold, fontSize: 26),)
+                        ],
+                      ),
+                    )
+                  ),
+                )
 
               ],
             ),

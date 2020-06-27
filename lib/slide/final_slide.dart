@@ -12,25 +12,27 @@ class _FinalSlideState extends State<FinalSlide> {
       padding: const EdgeInsets.all(24.0),
       child: Column(
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: Center(
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Center(
+                    child: Image.asset(
+                      'assets/FL18_Slide_97_v01.gif',
+                      height: MediaQuery.of(context).size.height / 1.2,
+                      width: MediaQuery.of(context).size.width,
+                    ),
+                  ),
+                ),
+                Expanded(
                   child: Image.asset(
-                    'assets/FL18_Slide_97_v01.gif',
+                    'assets/desktop_app_01.png',
                     height: MediaQuery.of(context).size.height / 1.2,
                     width: MediaQuery.of(context).size.width,
                   ),
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'assets/desktop_app_01.png',
-                  height: MediaQuery.of(context).size.height / 1.2,
-                  width: MediaQuery.of(context).size.width,
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
           Text(
             "Slide Link : https://github.com/JAICHANGPARK/flutter_day_extended_seoul_2020",

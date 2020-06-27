@@ -12,6 +12,12 @@ class _Slide07State extends State<Slide07>  with SingleTickerProviderStateMixin{
   AnimationController _animationController;
   Animation<double> _animation;
   @override
+  void dispose() {
+    // TODO: implement dispose
+    _animationController.dispose();
+    super.dispose();
+  }
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -27,6 +33,7 @@ class _Slide07State extends State<Slide07>  with SingleTickerProviderStateMixin{
 
     _animationController.forward();
   }
+
   @override
   Widget build(BuildContext context) {
 

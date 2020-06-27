@@ -14,13 +14,18 @@ class _Slide01State extends State<Slide01> with SingleTickerProviderStateMixin{
   void initState() {
     // TODO: implement initState
     super.initState();
-    _animationController = AnimationController(vsync: this, duration: Duration(seconds:3));
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds:1));
     _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)..addListener(() {
       setState(() {
-
       });
     });
     _animationController.forward();
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _animationController.dispose();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -33,7 +38,7 @@ class _Slide01State extends State<Slide01> with SingleTickerProviderStateMixin{
         Center(
           child: DecodingTextEffect(
             "Null Safety",
-            decodeEffect: DecodeEffect.fromStart,
+            decodeEffect: DecodeEffect.all,
             textStyle: TextStyle(fontSize: 140, fontWeight: FontWeight.bold),
           ),
         ),

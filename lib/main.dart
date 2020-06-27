@@ -18,15 +18,19 @@ import 'slide/slide_04_05.dart';
 import 'slide/slide_05.dart';
 import 'slide/slide_06.dart';
 import 'slide/slide_07.dart';
+import 'slide/slide_07_00.dart';
 import 'slide/slide_08.dart';
-import 'slide/slide_page_01_test.dart';
+import 'slide/slide_09.dart';
+import 'slide/slide_10.dart';
+import 'slide/slide_11.dart';
+import 'slide/slide_12.dart';
+import 'slide/thank_you_slide.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,9 +43,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
   final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -52,7 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
   int _pageIndex = 0;
   Timer _timer;
 
-
   @override
   void initState() {
     // TODO: implement initState
@@ -61,6 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
     _pageController = PageController(initialPage: _pageIndex);
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _pageController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,11 +96,21 @@ class _MyHomePageState extends State<MyHomePage> {
           print(_pageIndex);
           if (event.logicalKey.keyLabel == "[") {
           } else if (event.logicalKey.keyLabel == "]") {}
+          if(event.logicalKey.keyId == 0x100070051){
+            _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+          }else if(event.logicalKey.keyId == 0x100070052){
+            if(_pageIndex != 0)
+            _pageController.previousPage(
+                duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+          }
         },
+
+
         child: Stack(
           children: [
             PageView(
-              onPageChanged: (newValue){
+              onPageChanged: (newValue) {
+                print(newValue);
                 setState(() {
                   _pageIndex = newValue;
                 });
@@ -102,7 +119,6 @@ class _MyHomePageState extends State<MyHomePage> {
               scrollDirection: Axis.vertical,
               children: [
                 Slide01(),
-                Slide0100(),
                 Slide0101(),
                 Slide0200(),
                 Slide02(),
@@ -113,40 +129,85 @@ class _MyHomePageState extends State<MyHomePage> {
                 Slide0403(),
                 Slide0404(),
                 Slide0405(),
-                Slide07(),
+                Slide08(),
+                Slide07(), // Null safety
+                Slide0100(),
+                Slide11(),
+                Slide10(),
                 Slide05(),
                 Slide06(),
-                Slide08(),
+                Slide0700(),
+                Slide09(),
+                Slide12(),
                 FinalSlide(),
+                ThankyouSlide(),
               ],
             ),
-//            IndexedStack(
-//              index: _pageIndex,
-//              children: [
-//                Slide01(),
-//                Slide0101(),
-//                Slide0200(),
-//                Slide02(),
-//                Slide03(),
-//                Slide00(),
-//                FinalSlide(),
-//              ],
-//            ),
             Positioned(
               right: 16,
               bottom: 16,
               child: Column(
                 children: [
+                  FloatingActionButton(
+                    tooltip: "Controller",
+                    heroTag: "Remote",
+                    child: Icon(Icons.settings_remote),
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return Column(
+                              children: [
+                                ListTile(
+                                  title: Text("Home"),
+                                  onTap: (){
+                                    _pageController.animateToPage(0, duration: Duration(
+                                        seconds: 1
+                                    ), curve: Curves.easeOut);
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("Dart"),
+                                  onTap: (){
+                                    _pageController.animateToPage(4, duration: Duration(
+                                      seconds: 1
+                                    ), curve: Curves.easeOut);
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("Null Safety"),
+                                  onTap: (){
+                                    _pageController.animateToPage(12, duration: Duration(
+                                        seconds: 1
+                                    ), curve: Curves.easeOut);
+                                    Navigator.of(context).pop();
+//                                    _pageController.jumpToPage(15);
+                                  },
+                                ),
+                                ListTile(
+                                  title: Text("Final Slide"),
+                                  onTap: (){
+                                    _pageController.animateToPage(22, duration: Duration(
+                                        seconds: 1
+                                    ), curve: Curves.easeOut);
+                                    Navigator.of(context).pop();
+                                  },
+                                )
+                              ],
+                            );
+                          });
+                    },
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
                   _pageIndex != 0
                       ? FloatingActionButton(
                           onPressed: () {
-//                            _pageIndex--;
-//                            if (_pageIndex <= 0) {
-//                              _pageIndex = 0;
-//                            }
-//                            setState(() {});
-
-                            _pageController.previousPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+                            _pageController.previousPage(
+                                duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
                           },
                           tooltip: 'Prev Slide',
                           heroTag: "Prev Page",
@@ -156,20 +217,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     height: 16,
                   ),
-                  FloatingActionButton(
+                  _pageIndex != 22 ? FloatingActionButton(
                     onPressed: () {
-
                       _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
-//                      _pageIndex++;
-//                      if (_pageIndex > 10) {
-//                        _pageIndex = 10;
-//                      }
-//                      setState(() {});
                     },
                     heroTag: "next ",
                     tooltip: 'Next Slide',
                     child: Icon(Icons.arrow_downward),
-                  ),
+                  ): Container(),
                 ],
               ),
             )
