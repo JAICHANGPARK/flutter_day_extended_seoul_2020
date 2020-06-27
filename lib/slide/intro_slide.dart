@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pimp_my_button/pimp_my_button.dart';
 
 import '../main.dart';
 
@@ -74,27 +75,60 @@ class _IntroSlideState extends State<IntroSlide> {
             Expanded(
               flex: 1,
               child: Center(
-                  child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-//                    builder: (context) => IntroSlide()
-                      builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul 2020")));
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                      boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 2, spreadRadius: 3)]),
-                  height: 84,
-                  width: 84,
-                  child: Center(
-                    child: Icon(
-                      Icons.play_arrow,
-                      size: 42,
-                    ),
-                  ),
+                child: PimpedButton(
+                  particle: RectangleDemoParticle(),
+                  pimpedWidgetBuilder: (context, controller) {
+                    controller
+                      ..addStatusListener((status) {
+                        if (controller.status == AnimationStatus.completed) {
+                          print("Completed --- ");
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul 2020")));
+                        }
+                      });
+                    return GestureDetector(
+                      onTap: () {
+                        controller.forward(from: 0.0);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle, boxShadow: [
+                          BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 2, spreadRadius: 3)
+                        ]),
+                        height: 94,
+                        width: 94,
+                        child: Center(
+                          child: Icon(
+                            Icons.play_arrow,
+                            size: 42,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
-              )),
+              ),
+//              child: Center(
+//                  child: GestureDetector(
+//                onTap: () {
+//                  Navigator.of(context).push(MaterialPageRoute(
+////                    builder: (context) => IntroSlide()
+//                      builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul 2020")));
+//                },
+//                child: Container(
+//                  decoration: BoxDecoration(
+//                      color: Colors.white,
+//                      shape: BoxShape.circle,
+//                      boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 2, spreadRadius: 3)]),
+//                  height: 84,
+//                  width: 84,
+//                  child: Center(
+//                    child: Icon(
+//                      Icons.play_arrow,
+//                      size: 42,
+//                    ),
+//                  ),
+//                ),
+//              )),
             )
           ],
         ),

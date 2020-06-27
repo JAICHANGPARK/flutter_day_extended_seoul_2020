@@ -1,6 +1,5 @@
 
-import 'package:f_desktop/main.dart';
-import 'package:f_desktop/slide/intro_slide.dart';
+import 'package:flutter_day_seoul/slide/intro_slide.dart';
 import 'package:flutter/material.dart';
 
 class SplashSlider extends StatefulWidget {
