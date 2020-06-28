@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -75,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _pageController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,16 +105,13 @@ class _MyHomePageState extends State<MyHomePage> {
           print(_pageIndex);
           if (event.logicalKey.keyLabel == "[") {
           } else if (event.logicalKey.keyLabel == "]") {}
-          if(event.logicalKey.keyId == 0x100070051){
+          if (event.logicalKey.keyId == 0x100070051) {
             _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
-          }else if(event.logicalKey.keyId == 0x100070052){
-            if(_pageIndex != 0)
-            _pageController.previousPage(
-                duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+          } else if (event.logicalKey.keyId == 0x100070052) {
+            if (_pageIndex != 0)
+              _pageController.previousPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
           }
         },
-
-
         child: Stack(
           children: [
             PageView(
@@ -174,42 +173,38 @@ class _MyHomePageState extends State<MyHomePage> {
                               children: [
                                 ListTile(
                                   title: Text("Home"),
-                                  onTap: (){
+                                  onTap: () {
                                     _pageIndex = 0;
-                                    _pageController.animateToPage(0, duration: Duration(
-                                        seconds: 1
-                                    ), curve: Curves.easeOut);
+                                    _pageController.animateToPage(0,
+                                        duration: Duration(seconds: 1), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
                                   },
                                 ),
                                 ListTile(
                                   title: Text("Dart"),
-                                  onTap: (){
+                                  onTap: () {
                                     _pageIndex = 3;
-                                    _pageController.animateToPage(3, duration: Duration(
-                                      seconds: 1
-                                    ), curve: Curves.easeOut);
+                                    _pageController.animateToPage(3,
+                                        duration: Duration(seconds: 1), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
                                   },
                                 ),
                                 ListTile(
                                   title: Text("Null Safety"),
-                                  onTap: (){
+                                  onTap: () {
                                     _pageIndex = 12;
-                                    _pageController.animateToPage(12, duration: Duration(
-                                        seconds: 1
-                                    ), curve: Curves.easeOut);
+                                    _pageController.animateToPage(12,
+                                        duration: Duration(seconds: 1), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
 //                                    _pageController.jumpToPage(15);
                                   },
                                 ),
                                 ListTile(
                                   title: Text("Final Slide"),
-                                  onTap: (){
+                                  onTap: () {
                                     _pageIndex = 29;
-                                    _pageController.animateToPage(29, duration: Duration(
-                                        seconds: 1
-                                    ), curve: Curves.easeOut);
+                                    _pageController.animateToPage(29,
+                                        duration: Duration(seconds: 1), curve: Curves.easeOut);
                                     Navigator.of(context).pop();
                                   },
                                 )
@@ -235,18 +230,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     height: 16,
                   ),
-                  _pageIndex != 29 ? FloatingActionButton(
-                    onPressed: () {
-                      
-                      _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
-                      setState(() {
-
-                      });
-                    },
-                    heroTag: "next ",
-                    tooltip: 'Next Slide',
-                    child: Icon(Icons.arrow_downward),
-                  ): Container(),
+                  _pageIndex != 29
+                      ? FloatingActionButton(
+                          onPressed: () {
+                            _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
+                            setState(() {});
+                          },
+                          heroTag: "next ",
+                          tooltip: 'Next Slide',
+                          child: Icon(Icons.arrow_downward),
+                        )
+                      : Container(),
                 ],
               ),
             )
