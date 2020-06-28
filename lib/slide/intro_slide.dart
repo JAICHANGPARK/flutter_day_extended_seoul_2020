@@ -14,7 +14,7 @@ class _IntroSlideState extends State<IntroSlide> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter Day Extended Seoul 2020"),
+        title: Text("Flutter Day Extended Korea 2020"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -84,7 +84,7 @@ class _IntroSlideState extends State<IntroSlide> {
                           controller.reset();
                           print("Completed --- ");
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul 2020")));
+                              builder: (context) => MyHomePage(title: "Flutter Day Extended Korea 2020")));
                         }
                       });
                     return GestureDetector(

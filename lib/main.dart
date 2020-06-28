@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Day Extended Seoul 2020',
+      title: 'Flutter Day Extended Korea 2020',
       theme: ThemeData.light(),
       home: SplashSlider(),
     );
