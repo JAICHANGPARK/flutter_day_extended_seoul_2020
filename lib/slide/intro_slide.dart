@@ -27,11 +27,11 @@ class _IntroSlideState extends State<IntroSlide> {
                 child: Row(
                   children: [
                     CircleAvatar(
-                      radius: MediaQuery.of(context).size.width / 9,
+                      radius: MediaQuery.of(context).size.width / 8,
                       backgroundImage: AssetImage("assets/img_profile.jpg"),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 84),
+                      padding: const EdgeInsets.only(left: 64),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,7 @@ class _IntroSlideState extends State<IntroSlide> {
                             ),
                           ),
                           SizedBox(
-                            height: 64,
+                            height: 100,
                           ),
                           Text(
                             "박제창 (@Dreamwalker)",
@@ -81,6 +81,7 @@ class _IntroSlideState extends State<IntroSlide> {
                     controller
                       ..addStatusListener((status) {
                         if (controller.status == AnimationStatus.completed) {
+                          controller.reset();
                           print("Completed --- ");
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => MyHomePage(title: "Flutter Day Extended Seoul 2020")));
