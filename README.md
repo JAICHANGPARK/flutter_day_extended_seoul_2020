@@ -1,4 +1,4 @@
-# flutter_day_extended_seoul_2020
+# flutter_day_extended_korea_2020
 
 - Flutter Desktop Embedded App for windows 
 - https://festa.io/events/1070
