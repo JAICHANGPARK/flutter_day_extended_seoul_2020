@@ -109,24 +109,5 @@ class _ThankyouSlideState extends State<ThankyouSlide> with SingleTickerProvider
         ),
       ],
     );
-//    return Padding(
-//      padding: const EdgeInsets.symmetric(horizontal: 24),
-//      child: Row(
-//        children: [
-//          Expanded(child: Image.network("https://1.bp.blogspot.com/-6pDrDpYKUCg/Xor0RTjWgtI/AAAAAAABYL0/-y57hak6vKEhfrtHwOashooPxNMUaYJ8ACNcBGAsYHQ/s400/online_kaigi_man.png")),
-//          Expanded(
-//            flex: 3,
-//            child: Center(
-//              child: DecodingTextEffect(
-//                "Thank You",
-//                decodeEffect: DecodeEffect.all,
-//                textStyle: TextStyle(fontSize: 140, fontWeight: FontWeight.bold),
-//              ),
-//            ),
-//          ),
-//          Expanded(child: Image.network("https://1.bp.blogspot.com/-8-o0j4R1RNY/Xor0SBXlEXI/AAAAAAABYL8/Kr6jXb2sYo4OPnAtiesh1LXNSIpjPW_ogCNcBGAsYHQ/s400/online_kaigi_woman.png"))
-//        ],
-//      ),
-//    );
   }
 }
